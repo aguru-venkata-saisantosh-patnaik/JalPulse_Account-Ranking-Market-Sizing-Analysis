@@ -1,0 +1,6 @@
+rule_type,pollution_category,value,tag,room_band
+cto_validity_years,Red,5,P,
+cto_validity_years,Orange,10,P,
+cto_validity_years,Green,15,P,
+cto_processing_days,,90,P,more_than_50
+cto_processing_days,,60,P,50_or_less

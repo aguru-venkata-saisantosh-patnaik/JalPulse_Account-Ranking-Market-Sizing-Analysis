@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Cached downloads of public sources (large binaries; re-fetched by
+# `python -m src.fetch` or `python run_all.py` -- no need to version them).
+data/raw/sources/

@@ -1,0 +1,10 @@
+pandas>=2.0
+requests>=2.28
+beautifulsoup4>=4.12
+
+# Optional, only needed to run the plotting cells in notebooks/JalPulse_Analysis.ipynb:
+# matplotlib>=3.7
+
+# System dependency (not pip-installable): poppler-utils, for the `pdftotext` binary.
+#   macOS:          brew install poppler
+#   Debian/Ubuntu:  apt-get install poppler-utils

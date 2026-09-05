@@ -1,0 +1,5 @@
+fact_key,value,tag,confidence,note
+licence_described_as_perpetual,True,CD,,
+licence_issue_date,2017-07-21,CD,manually confirmed,
+licence_expiry_date,"2027-07-26 (fallback, confirm manually)",CD,,
+internal_inconsistency_flag,True,D,,Prospectus risk-factor prose calls the licence 'perpetual' while the certificate table lists a specific expiry date. Resolve before treating either framing as settled.
