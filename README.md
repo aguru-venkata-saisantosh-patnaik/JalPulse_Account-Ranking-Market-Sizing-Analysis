@@ -25,7 +25,6 @@ running it again reproduces every one of them.
 - [Walkthrough video](#walkthrough-video)
 - [The two things this pipeline builds](#the-two-things-this-pipeline-builds)
 - [Headline results](#headline-results-from-the-current-run)
-- [Quick start](#quick-start)
 - [Pipeline stages](#pipeline-stages)
 - [Project layout](#project-layout)
 - [Sources](#sources-see-configsources-for-exact-urls)
@@ -45,6 +44,12 @@ them.
 **[BGCC Case Round 2.pdf](BGCC%20Case%20Round%202.pdf)** is the original
 problem statement issued by BITS Goa Consulting Club, included for
 context on the brief the deck answers.
+
+<img src="images/case_study_cover.png" alt="Deck cover: Stop selling tanks, start selling proof. The recommendation is to sell dependable operation, documented compliance and productive water reuse, priced as an annual contract on 428 named accounts, with headline figures of 9,498 properties scored, 428 worth winning and winnable, and a three year revenue path from 12.0 to 23.6 crore." width="100%">
+
+<img src="images/market_sizing.png" alt="Market sizing slide: 9,498 registered Goa properties scored, narrowed through room count, decision-fit and value thresholds down to 428 accounts worth winning in Year 1, alongside the funnel from a 750 crore total addressable market to an 86 crore serviceable market to a 21 crore three year deliverable." width="100%">
+
+<img src="images/three_year_plan.png" alt="Three year rollout: Year 1 proves the model in Goa and North Karnataka with zero new geography, Year 2 repeats into neighbouring Maharashtra and Karnataka clusters, Year 3 scales through certified partners, gated throughout by plant running time, lab sample compliance and customer reference thresholds that must clear before the next phase opens." width="100%">
 
 ## Walkthrough video
 
@@ -89,27 +94,6 @@ Every one of these numbers is reproduced by `python run_all.py` on a
 clean checkout. See [`reports/jalpulse_summary.md`](reports/jalpulse_summary.md)
 and [`reports/evidence_log.md`](reports/evidence_log.md) for the full
 detail and traceability behind each.
-
-## Quick start
-
-```bash
-pip install -r requirements.txt
-# also requires the `pdftotext` binary (poppler-utils) on PATH:
-#   macOS:          brew install poppler
-#   Debian/Ubuntu:  apt-get install poppler-utils
-
-python run_all.py
-```
-
-That single command fetches every source, extracts the data, scores the
-register and writes the reports. Everything under `data/` and `reports/`
-is generated output. Re-running is cheap: each stage caches its work and
-skips what's already done unless you pass a `--force*` flag (see
-`python run_all.py --help`).
-
-To explore interactively instead, open
-`notebooks/JalPulse_Analysis.ipynb`. It calls the same functions cell by
-cell so you can inspect intermediate results as you go.
 
 ## Pipeline stages
 
@@ -163,6 +147,7 @@ data/
 reports/
   jalpulse_summary.md      <- findings, ready to drop into slide notes
   evidence_log.md          <- every fact, tagged [P]/[CD]/[D]/[A]
+images/                     <- deck slide exports embedded in this README
 CaseConsilium_Chanakya.pdf <- the submission deck
 CaseConsilium_Chanakya.mp4 <- walkthrough video
 BGCC Case Round 2.pdf      <- the original problem statement
